@@ -1,4 +1,4 @@
-## Setup development environment (Linux)
+## Setup development environment (Linux or Windows Linux Subsystem)
 
 ### 1. Build containers
 
