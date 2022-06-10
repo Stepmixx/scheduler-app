@@ -8,7 +8,7 @@
 
 `vendor/bin/sail up`
 
-This may take a while to download all the images containers the first time. Then go to http://localhost/
+This may take a while to download all the images and containers the first time. Then go to http://localhost/
 
 ## License
 
