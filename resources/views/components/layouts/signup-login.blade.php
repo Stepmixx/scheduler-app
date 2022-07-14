@@ -29,7 +29,7 @@
             </div>
             <div class="form-container">
                 <h3 class="title">{{ $formTitle }}</h3>
-                <form class="form">
+                <form action="{{ $formAction }}" method="POST"  class="form">
                     {{ $slot }}
                     <button
                     type="submit"
