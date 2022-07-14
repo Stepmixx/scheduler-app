@@ -74,18 +74,19 @@ form {
 
 label {
     color: #b0b0b0;
+    margin-top: 1.5rem;
 }
 
 .form > input {
     height: 24px;
-    margin-bottom: 2rem;
     font-size: 1rem;
+    margin-bottom: 0.5rem;
     border: none;
     border-bottom: #b0b0b0 solid 2px;
 }
 
 .form > input:focus {
-    border: none;
+    outline: none;
     border-bottom: #1976d2 solid 2px;
 }
 
@@ -115,7 +116,13 @@ label {
     box-shadow: 0px 4px 4px rgba(88, 133, 196, 0.15);
 }
 
+.top-button:hover {
+    background-color: #eeeeee;
+}
+
 .submit-button {
+    cursor: pointer;
+    margin-top: 2rem;
     height: 48px;
     width: 130px;
     font-size: 1rem;
@@ -127,14 +134,52 @@ label {
     margin-inline: auto;
 }
 
+.submit-button:hover {
+    background-color: #0f4c75;
+}
+
 .link {
     text-decoration: none;
 }
 
-title {
+.title {
     font-weight: bold;
     font-size: 26px;
     margin-bottom: 1rem;
+}
+
+.error {
+    color: red;
+    font-size: 1rem;
+}
+
+.success-action {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #dcffdb;
+    color: #2ec62b;
+    font-size: 1rem;
+    border: 1px solid #82db81;
+}
+
+.error-action {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #ffdbdb;
+    color: #c62b2b;
+    font-size: 1rem;
+    border: 1px solid #db8181;
+}
+
+.success-action p,
+.error-action p {
+    margin-left: 1rem;
 }
 
 @media (min-width: 900px) {
@@ -182,11 +227,11 @@ title {
     .submit-button {
         height: 56;
         width: 160;
-        margin-top: 1rem;
+        margin-top: 2rem;
     }
 
     .title {
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
 }
 
