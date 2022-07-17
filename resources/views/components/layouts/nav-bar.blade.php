@@ -6,6 +6,9 @@
         </a>
     </div>
     <ul class="navLinks">
+        @if($user->isAdmin())
+            <li><a href="{{ route('users') }}">Usuarios</a></li>     
+        @endif
         <li><a href="{{ route('shifts') }}">Turnos</a></li>
         <li><a href="{{ route('disponibilities') }}">Disponibilidad</a></li>
         <li>

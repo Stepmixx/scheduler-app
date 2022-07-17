@@ -2,7 +2,7 @@
     <x-slot name="head">
         <link href="{{ asset('css/auth-layout.css') }}" rel="stylesheet">
     </x-slot>
-    <x-layouts.nav-bar/>
+    <x-layouts.nav-bar user="{{ $user }}"/>
     <div class="content-container">
         <div class="paper">
             {{ $slot }}

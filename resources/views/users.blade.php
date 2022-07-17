@@ -1,6 +1,5 @@
-<x-layouts.auth-layout title="Usuarios">
+<x-layouts.auth-layout title="Usuarios" user="{{ $user }}">
     <p>Usuarios</p>
-
     <table>
         <thead>
             <th>Nombre</th>
