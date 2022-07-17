@@ -18,19 +18,24 @@ class AuthController extends Controller
     }
 
     public function homePage() {
-        $user = array();
         if (Session::has('loginId')) {
             $user = User::where('id', '=', Session::get('loginId'))->first();
+            return view('home', compact('user'));
         }
-        return view('home', compact('user'));
     }
 
     public function shifts() {
-        return view('shifts');
+        if (Session::has('loginId')) {
+            $user = User::where('id', '=', Session::get('loginId'))->first();
+            return view('shifts', compact('user'));
+        }
     }
 
     public function disponibilities() {
-        return view('disponibilities');
+        if (Session::has('loginId')) {
+            $user = User::where('id', '=', Session::get('loginId'))->first();
+            return view('disponibilities', compact('user'));
+        }
     }
 
     public function users() {
@@ -38,7 +43,8 @@ class AuthController extends Controller
             $user = User::where('id', '=', Session::get('loginId'))->first();
             if ($user->isAdmin()) {
                 $users = User::all();
-                return view('users', compact('users'));
+                $user = User::where('id', '=', Session::get('loginId'))->first();
+                return view('users', compact('users'), compact('user'));
             } else {
                 return redirect()->route('home');
             }
