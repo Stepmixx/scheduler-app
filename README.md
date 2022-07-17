@@ -4,7 +4,11 @@
 
 `vendor/bin/sail build`
 
-### 2. Mount containers
+### 2. Migrate Database
+
+`vendor/bin/sail artisan migrate`
+
+### 3. Mount containers
 
 `vendor/bin/sail up`
 
